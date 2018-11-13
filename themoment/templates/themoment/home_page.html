@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block css %}
+    <style>
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page > * {
+            width: 120rem;
+            max-width: 100%;
+        }
+
+        .page__banner {
+            position: fixed;
+            z-index: 1;
+            text-align: center;
+            background-color: rgba(206, 82, 0, 0.8);
+            width: 100%;
+        }
+
+        .headline {
+            position: relative;
+        }
+
+        .headline__image {
+            height: 50rem;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .headline.secondary {
+            width: 60em;
+        }
+
+        .headline__title {
+            background-color: rgba(112, 10, 81, 0.3);
+            color: white;
+            padding: 1rem;
+            font-size: 5rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-family: 'Raleway';
+            font-weight: bold;
+        }
+
+        .headline__intro {
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            font-weight: normal;
+        }
+
+        .secondary-articles {
+            display: flex;
+        }
+
+        .secondary-articles .article {
+            width: 60em;
+        }
+
+        .secondary-articles .article:not(:last-child) {
+            margin-right: 1em;
+        }
+
+        .secondary-articles .article:not(:first-child) {
+            margin-left: 1em;
+        }
+
+        .article {
+            font-size: 2rem;
+            font-weight: 100;
+            line-height: 1.5;
+        }
+
+        .group-sep {
+            height: 4px;
+            background-color: rgba(112, 10, 81, 0.9);
+            border: none;
+            margin-bottom: 3rem;
+        }
+
+        .page__banner > svg {
+            width: 21rem;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="page__banner">{% include "logo.svg" %}</h1>
+    <main class="page">
+        <a class="article" href="{% pageurl page.headline_article %}">
+            <div class="headline">
+                {% image page.headline_article.image max-1000x500 as image %}
+                <img class="headline__image" src="{{ image.url }}">
+                <h2 class="headline__title">
+                    {{ page.headline_article.title }}
+                </h2>
+            </div>
+
+            <article class="headline__intro">
+                {{ page.headline_article.intro }}
+            </article>
+        </a>
+
+        <hr class="group-sep">
+
+        <div class="secondary-articles">
+            {% for article in page.secondary_articles %}
+
+            <a class="article" href="{% pageurl article %}">
+                <div class="headline">
+                    {% image article.image max-1000x500 as image %}
+                    <img class="headline__image" src="{{ image.url }}">
+                    <h2 class="headline__title">
+                        {{ article.title }}
+                    </h2>
+                </div>
+
+                <div class="headline__intro">
+                    {{ article.intro }}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

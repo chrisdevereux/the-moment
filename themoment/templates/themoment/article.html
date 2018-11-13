@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block css %}
+    <style>
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page > * {
+            width: 80rem;
+        }
+
+        .page__banner {
+            position: fixed;
+            z-index: 1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.85);
+            width: 100%;
+        }
+
+        .headline {
+            position: relative;
+        }
+
+        .headline__image {
+            height: 50rem;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .headline__title {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 1rem;
+            font-size: 5rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-family: 'Raleway';
+            font-weight: bold;
+        }
+
+        .article {
+            font-size: 2rem;
+            font-weight: 100;
+            line-height: 1.5;
+        }
+
+        .page__banner > svg {
+            width: 21rem;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="page__banner">{% include "logo.svg" %}</h1>
+    <main class="page">
+        <div class="headline">
+            {% image page.image max-1000x500 as image %}
+            <img class="headline__image" src="{{ image.url }}">
+            <h2 class="headline__title">
+                {{ page.title }}
+            </h2>
+        </div>
+        <article class="article">
+            {{ page.body | richtext }}
+        </article>
+    </main>
+{% endblock %}

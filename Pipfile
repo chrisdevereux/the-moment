@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+django = "*"
+"psycopg2" = "*"
+django-heroku = "*"
+python-dotenv = "*"
+wagtail = "*"
+django-livereload-server = "*"
+gunicorn = "*"
+
+[requires]
+python_version = "3.6"

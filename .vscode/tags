@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+0001_initial.py	../themoment/migrations/0001_initial.py	1;"	kind:file	line:1
+ALLOWED_HOSTS	../myproject/settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:32
+AUTH_PASSWORD_VALIDATORS	../myproject/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:126
+Article	../themoment/models.py	/^class Article(Page):$/;"	kind:class	line:8
+BASE_DIR	../myproject/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:20
+DATABASES	../myproject/settings.py	/^DATABASES = {$/;"	kind:variable	line:111
+DEBUG	../myproject/settings.py	/^DEBUG = os.environ.get("PRODUCTION") == None$/;"	kind:variable	line:30
+HomePage	../themoment/models.py	/^class HomePage(Page):$/;"	kind:class	line:22
+INSTALLED_APPS	../myproject/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:37
+LANGUAGE_CODE	../myproject/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:145
+MEDIA_ROOT	../myproject/settings.py	/^MEDIA_ROOT = ''$/;"	kind:variable	line:163
+MEDIA_URL	../myproject/settings.py	/^MEDIA_URL = '\/'$/;"	kind:variable	line:164
+MIDDLEWARE	../myproject/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:68
+Migration	../themoment/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+ROOT_URLCONF	../myproject/settings.py	/^ROOT_URLCONF = 'myproject.urls'$/;"	kind:variable	line:85
+SECRET_KEY	../myproject/settings.py	/^SECRET_KEY = 'cuu5l(_qehv661p*0do-4%q_boo6!bq*op!s52vhtfrlk+y$%='$/;"	kind:variable	line:27
+STATIC_URL	../myproject/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:159
+TEMPLATES	../myproject/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:87
+TIME_ZONE	../myproject/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:147
+ThemomentConfig	../themoment/apps.py	/^class ThemomentConfig(AppConfig):$/;"	kind:class	line:4
+USE_I18N	../myproject/settings.py	/^USE_I18N = True$/;"	kind:variable	line:149
+USE_L10N	../myproject/settings.py	/^USE_L10N = True$/;"	kind:variable	line:151
+USE_TZ	../myproject/settings.py	/^USE_TZ = True$/;"	kind:variable	line:153
+WAGTAIL_SITE_NAME	../myproject/settings.py	/^WAGTAIL_SITE_NAME = 'The Moment'$/;"	kind:variable	line:168
+WSGI_APPLICATION	../myproject/settings.py	/^WSGI_APPLICATION = 'myproject.wsgi.application'$/;"	kind:variable	line:105
+__init__.py	../myproject/__init__.py	1;"	kind:file	line:1
+__init__.py	../themoment/__init__.py	1;"	kind:file	line:1
+__init__.py	../themoment/migrations/__init__.py	1;"	kind:file	line:1
+admin.py	../themoment/admin.py	1;"	kind:file	line:1
+application	../myproject/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
+apps.py	../themoment/apps.py	1;"	kind:file	line:1
+bases	../themoment/migrations/0001_initial.py	/^            bases=('wagtailcore.page',),$/;"	kind:variable	line:29
+bases	../themoment/migrations/0001_initial.py	/^            bases=('wagtailcore.page',),$/;"	kind:variable	line:40
+body	../themoment/models.py	/^    body = RichTextField('Article', blank=True)$/;"	kind:variable	line:10
+content_panels	../themoment/models.py	/^    content_panels = Page.content_panels + [$/;"	kind:variable	line:28
+content_panels	../themoment/models.py	/^    content_panels = [$/;"	kind:variable	line:15
+dependencies	../themoment/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:12
+fields	../themoment/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:20
+fields	../themoment/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:33
+headline_article	../themoment/models.py	/^    headline_article = models.ForeignKey(Article, null=True, on_delete=models.PROTECT)$/;"	kind:variable	line:23
+image	../themoment/models.py	/^    image = models.ForeignKey($/;"	kind:variable	line:11
+initial	../themoment/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:10
+intro	../themoment/models.py	/^    intro = models.TextField('Introduction', blank=True)$/;"	kind:variable	line:9
+main_image	../themoment/models.py	/^    def main_image(self):$/;"	kind:member	line:25
+manage.py	../manage.py	1;"	kind:file	line:1
+models.py	../themoment/models.py	1;"	kind:file	line:1
+name	../themoment/apps.py	/^    name = 'themoment'$/;"	kind:variable	line:5
+name	../themoment/migrations/0001_initial.py	/^            name='Article',$/;"	kind:variable	line:19
+name	../themoment/migrations/0001_initial.py	/^            name='HomePage',$/;"	kind:variable	line:32
+operations	../themoment/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:17
+options	../themoment/migrations/0001_initial.py	/^            options={$/;"	kind:variable	line:26
+options	../themoment/migrations/0001_initial.py	/^            options={$/;"	kind:variable	line:37
+settings.py	../myproject/settings.py	1;"	kind:file	line:1
+tests.py	../themoment/tests.py	1;"	kind:file	line:1
+urlpatterns	../myproject/urls.py	/^urlpatterns = [$/;"	kind:variable	line:10
+urls.py	../myproject/urls.py	1;"	kind:file	line:1
+views.py	../themoment/views.py	1;"	kind:file	line:1
+wsgi.py	../myproject/wsgi.py	1;"	kind:file	line:1
